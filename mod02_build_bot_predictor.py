@@ -1,4 +1,4 @@
-# packages
+
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
 
@@ -10,9 +10,9 @@ def train_model(X, y, seed=seed):
     Build a GBM on given data
     """
     model = GradientBoostingClassifier(
-        learning_rate=0.1,
-        n_estimators=100,
-        max_depth=8,
+        learning_rate=0.01,
+        n_estimators=10000,
+        max_depth=None,
         subsample=1,
         min_samples_leaf=1,
         random_state=seed
